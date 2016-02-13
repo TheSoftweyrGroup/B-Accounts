@@ -41,6 +41,7 @@
              
                 <div style="text-align:center;margin:20px;">
                     <img id="cameraPic" src="" style="width:auto;height:120px;"></img>
+                    <div id="cameraData"></div>
                 </div>
             </div>
         </div>
@@ -61,8 +62,10 @@
                 // this is where you would send the image file to server
                  
                 //output image to screen
-    var image = document.getElementById('cameraPic');
-    image.src = "data:image/jpeg;base64," + data;
+                var image = document.getElementById('cameraPic');
+                image.src = "data:image/jpeg;base64," + data;
+
+                $('#cameraData').text(data);
 /*
                     var cameraPic = $('#cameraPic');
                     cameraPic.attr("src", "data:image/jpeg;base64," + data);
